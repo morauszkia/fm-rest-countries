@@ -8,11 +8,9 @@ import { CountryList } from "@/components/CountryList/CountryList";
 
 export default function Home() {
   return (
-    <div>
-      <main>
-        <Form />
-        <CountryList countries={countries} />
-      </main>
-    </div>
+    <main>
+      <Form />
+      <CountryList countries={countries} />
+    </main>
   );
 }
