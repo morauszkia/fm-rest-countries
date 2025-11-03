@@ -1,0 +1,38 @@
+.search {
+  width: min(100%, 30rem);
+  background-color: var(--elements);
+  color: var(--text);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: var(--radius);
+}
+
+.icon {
+  height: 1rem;
+  width: auto;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font: inherit;
+}
+
+.input::placeholder {
+  font: inherit;
+  color: var(--input);
+}
+
+.input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 48rem) {
+  .search {
+    font-size: var(--font-regular);
+  }
+}

@@ -1,0 +1,39 @@
+.card {
+  width: min(100%, 20rem);
+  border-radius: var(--radius);
+  background-color: var(--elements);
+  overflow: hidden;
+  font-size: var(--font-regular);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.flag {
+  width: 100%;
+  height: auto;
+  object-position: top left;
+  object-fit: contain;
+}
+
+.content {
+  padding: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.name {
+  font-size: var(--font-large);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info {
+  font-weight: 600;
+}

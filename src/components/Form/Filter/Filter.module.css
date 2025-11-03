@@ -1,0 +1,44 @@
+.filter {
+  position: relative;
+  width: 12.5rem;
+}
+
+.button {
+  padding: 1rem 1.5rem;
+  background-color: var(--elements);
+  border: none;
+  border-radius: var(--radius);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font: inherit;
+  color: var(--text);
+}
+
+.icon {
+  height: 0.5rem;
+  width: auto;
+}
+
+.options {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  /* transform: translateY(50%); */
+  list-style-type: none;
+  background-color: var(--elements);
+  padding: 1rem 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: var(--radius);
+}
+
+@media screen and (min-width: 48rem) {
+  .filter {
+    font-size: var(--font-regular);
+  }
+}
