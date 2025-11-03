@@ -72,9 +72,9 @@ export default async function Page({
           <div className={classes["details-block"]}>
             <h3>Border Countries:</h3>
             <ul>
-              {countryData.borders.map((code: string) => (
+              {countryData.borders?.map((code: string) => (
                 <li key={code}>{getCountryNameByCode(code)}</li>
-              ))}
+              )) || <span>None</span>}
             </ul>
           </div>
         </div>
