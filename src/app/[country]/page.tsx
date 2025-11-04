@@ -17,15 +17,14 @@ export default async function Page({
     <main className={classes.main}>
       <BackButton />
       <section className={classes["details-container"]}>
-        <header>
-          <Image
-            src={countryData.flags.svg}
-            alt={countryData.flags.alt}
-            width={800}
-            height={600}
-          />
-          <h2>{countryData.name.common}</h2>
-        </header>
+        <Image
+          src={countryData.flags.svg}
+          alt={countryData.flags.alt}
+          width={800}
+          height={600}
+          className={classes.flag}
+        />
+        <h2 className={classes.name}>{countryData.name.common}</h2>
         <div className={classes.details}>
           <div className={classes["details-block"]}>
             <p>
@@ -70,8 +69,10 @@ export default async function Page({
             </p>
           </div>
           <div className={classes["details-block"]}>
-            <h3>Border Countries:</h3>
-            <ul>
+            <h3 className={classes["detail-field-borders"]}>
+              Border Countries:
+            </h3>
+            <ul className={classes["border-countries"]}>
               {countryData.borders?.map((code: string) => (
                 <li key={code}>{getCountryNameByCode(code)}</li>
               )) || <span>None</span>}

@@ -5,3 +5,34 @@
 .details-container {
   margin-top: 4rem;
 }
+
+.flag {
+  width: min(100%, 36rem);
+  height: auto;
+  margin-bottom: 3rem;
+}
+
+.name {
+  margin-bottom: 1rem;
+  font-size: var(--font-xl);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.detail-field {
+  font-weight: 600;
+}
+
+.border-countries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  list-style: none;
+}

@@ -29,6 +29,7 @@ body {
   color: var(--text);
   background: var(--bg);
   font-size: var(--font-small);
+  font-weight: 300;
 }
 
 * {
