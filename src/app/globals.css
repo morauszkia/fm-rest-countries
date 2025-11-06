@@ -4,10 +4,10 @@
   --elements: hsl(0, 100%, 100%);
   --input: hsl(0, 0%, 50%);
   --radius: 5px;
-  --font-regular: 0.875rem;
   --font-small: 0.75rem;
+  --font-regular: 0.875rem;
+  --font-regular-lg: 1rem;
   --font-large: 1.125rem;
-  --font-xl: 1.5rem;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -6,7 +6,7 @@ export const apiUrlAll = `https://restcountries.com/v3.1/all?fields=${fieldsHome
 )}`;
 
 export const apiUrlByName = (name: string) =>
-  `https://restcountries.com/v3.1/name/${name}?fullText=true?fields=${fieldsHome.join(
+  `https://restcountries.com/v3.1/name/${name}?fullText=true&fields=${fieldsHome.join(
     ","
   )},${fieldsDetail.join(",")}`;
 

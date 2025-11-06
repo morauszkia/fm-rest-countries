@@ -1,0 +1,13 @@
+.border-country {
+  background-color: var(--elements);
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 48rem) {
+  .border-country {
+    font-size: var(--font-regular);
+    padding: 0.125rem 0;
+  }
+}
