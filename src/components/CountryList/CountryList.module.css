@@ -6,7 +6,7 @@
   gap: 2.5rem;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 49rem) {
   .grid {
     padding: 0 5.25rem;
     gap: 4.5rem;

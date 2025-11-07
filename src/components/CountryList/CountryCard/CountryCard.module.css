@@ -1,5 +1,5 @@
 .card {
-  width: min(100%, 20rem);
+  width: min(100%, 21rem);
   border-radius: var(--radius);
   background-color: var(--elements);
   overflow: hidden;
@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  margin: 0 auto;
 }
 
 .flag {
