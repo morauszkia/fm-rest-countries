@@ -8,6 +8,7 @@
   border: none;
   outline: none;
   cursor: pointer;
+  box-shadow: 0 0 7px 2px rgb(0 0 0 / 0.1);
 }
 
 @media screen and (min-width: 48rem) {

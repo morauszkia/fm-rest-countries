@@ -6,6 +6,7 @@
   align-items: center;
   gap: 1.5rem;
   border-radius: var(--radius);
+  box-shadow: 0 2px 9px rgb(0 0 0 / 0.0532);
 }
 
 .icon {

@@ -15,6 +15,7 @@
   cursor: pointer;
   font: inherit;
   color: var(--text);
+  box-shadow: 0 2px 9px rgb(0 0 0 / 0.0532);
 }
 
 .icon {
@@ -35,6 +36,7 @@
   flex-direction: column;
   gap: 0.5rem;
   border-radius: var(--radius);
+  box-shadow: 0 2px 9px rgb(0 0 0 / 0.0532);
 }
 
 @media screen and (min-width: 48rem) {
