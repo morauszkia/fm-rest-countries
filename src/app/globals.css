@@ -10,13 +10,11 @@
   --font-large: 1.125rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: hsl(207, 26%, 17%);
-    --text: hsl(0, 100%, 100%);
-    --input: hsl(0, 100%, 100%);
-    --elements: hsl(208, 23%, 22%);
-  }
+[data-theme="dark"] {
+  --bg: hsl(207, 26%, 17%);
+  --text: hsl(0, 100%, 100%);
+  --input: hsl(0, 100%, 100%);
+  --elements: hsl(208, 23%, 22%);
 }
 
 html,

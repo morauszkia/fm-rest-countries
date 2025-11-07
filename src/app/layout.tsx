@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header/Header";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Where in the world?",
@@ -19,10 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={nunitoSans.className}>
+    <html lang="en" className={nunitoSans.className} suppressHydrationWarning>
       <body>
-        <Header />
-        {children}
+        <ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
