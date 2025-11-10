@@ -1,14 +1,17 @@
 "use client";
 
+import { useState } from "react";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-import { useState } from "react";
-import { regions } from "@/util/constants";
-
 import classes from "./Filter.module.css";
 
-export const Filter = () => {
+export const Filter = ({
+  regions,
+}: {
+  regions: { id: number; name: string }[];
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -23,8 +26,13 @@ export const Filter = () => {
       </button>
       {isOpen && (
         <ul className={classes.options}>
+          <li>
+            <Link href="/">All Regions</Link>
+          </li>
           {regions.map((region) => (
-            <li key={region.id}>{region.name}</li>
+            <li key={region.id}>
+              <Link href={`/?region=${region.name}`}>{region.name}</Link>
+            </li>
           ))}
         </ul>
       )}
