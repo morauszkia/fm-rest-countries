@@ -1,4 +1,4 @@
-import type { CountryDetailData } from "./types";
+import type { CountryCardData } from "./types";
 
 export const getCountryNameByCode = async (code: string) => {
   const res = await fetch(`https://restcountries.com/v3.1/alpha/${code}`);
@@ -7,7 +7,7 @@ export const getCountryNameByCode = async (code: string) => {
 };
 
 export function getRegions(
-  data: CountryDetailData[]
+  data: CountryCardData[]
 ): { id: number; name: string }[] {
   return Array.from(new Set(data.map((country) => country.region)))
     .map((region, index) => ({

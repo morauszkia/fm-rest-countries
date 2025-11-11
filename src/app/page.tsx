@@ -1,18 +1,28 @@
 import { Form } from "@/components/Form/Form";
 import { apiUrlAll } from "@/util/constants";
 import { getRegions } from "@/util/util";
+import { CountryList } from "@/components/CountryList/CountryList";
+import { CountryCardData } from "@/util/types";
 
 const res = await fetch(apiUrlAll);
-const countries = await res.json();
+const countries = (await res.json()) as CountryCardData[];
 const regions = getRegions(countries);
 
-import { CountryList } from "@/components/CountryList/CountryList";
+export default async function Home({
+  searchParams,
+}: {
+  searchParams?: Promise<{ region: string }>;
+}) {
+  const params = await searchParams;
 
-export default function Home() {
+  const filteredCountries = params?.region
+    ? countries.filter((country) => country.region === params?.region)
+    : countries;
+
   return (
     <main>
       <Form regions={regions} />
-      <CountryList countries={countries} />
+      <CountryList countries={filteredCountries} />
     </main>
   );
 }
