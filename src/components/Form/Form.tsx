@@ -1,3 +1,5 @@
+"use client";
+
 import { Filter } from "./Filter/Filter";
 import { Search } from "./Search/Search";
 
@@ -9,9 +11,13 @@ export const Form = ({
   regions: { id: number; name: string }[];
 }) => {
   return (
-    <form className={classes.form}>
+    <section
+      role="form"
+      className={classes.form}
+      aria-label="Country search and filter"
+    >
       <Search />
       <Filter regions={regions} />
-    </form>
+    </section>
   );
 };

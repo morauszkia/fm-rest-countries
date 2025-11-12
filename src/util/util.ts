@@ -16,3 +16,14 @@ export function getRegions(
     }))
     .sort((a, b) => a.name.localeCompare(b.name));
 }
+
+export function getCountryNames(country: CountryCardData) {
+  const names = [];
+  names.push(country.name.common);
+  names.push(country.name.official);
+  for (const language of Object.values(country.name.nativeName)) {
+    names.push(language.common);
+    names.push(language.official);
+  }
+  return names;
+}
