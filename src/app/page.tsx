@@ -28,6 +28,10 @@ export default async function Home({
     });
   }
 
+  filteredCountries = filteredCountries.sort((a, b) =>
+    a.name.common.localeCompare(b.name.common)
+  );
+
   return (
     <main>
       <Form regions={regions} />
