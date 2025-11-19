@@ -1,12 +1,16 @@
 .search {
   width: min(100%, 30rem);
   background-color: var(--elements);
-  padding: 1rem 2rem;
+  padding-left: 2rem;
   display: flex;
   align-items: center;
   gap: 1.5rem;
   border-radius: var(--radius);
   box-shadow: 0 2px 9px rgb(0 0 0 / 0.0532);
+}
+
+.search:has(:focus-within) {
+  outline: 2px var(--text) solid;
 }
 
 .icon {
@@ -16,6 +20,7 @@
 
 .input {
   width: 100%;
+  padding: 1rem 0;
   border: none;
   outline: none;
   background-color: transparent;

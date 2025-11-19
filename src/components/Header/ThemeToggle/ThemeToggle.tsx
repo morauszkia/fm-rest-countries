@@ -9,8 +9,9 @@ import classes from "./ThemeToggle.module.css";
 export const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
 
-  const toggleThemeHandler = () => {
+  const toggleThemeHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
     setTheme(theme === "light" ? "dark" : "light");
+    event.currentTarget.blur();
   };
 
   return (

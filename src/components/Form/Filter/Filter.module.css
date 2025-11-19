@@ -37,6 +37,7 @@
   gap: 0.5rem;
   border-radius: var(--radius);
   box-shadow: 0 2px 9px rgb(0 0 0 / 0.0532);
+  z-index: 10;
 }
 
 @media screen and (min-width: 48rem) {

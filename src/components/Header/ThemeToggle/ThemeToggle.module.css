@@ -8,6 +8,16 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  border-radius: var(--radius);
+}
+
+.button:hover {
+  color: hsl(from var(--text) h s l / 0.75);
+}
+
+.button:focus {
+  outline: 2px var(--text) solid;
+  outline-offset: 0.5rem;
 }
 
 .icon {

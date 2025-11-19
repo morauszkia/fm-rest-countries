@@ -12,6 +12,10 @@
   font-weight: 800;
 }
 
+.title:hover {
+  color: hsl(from var(--text) h s l / 0.75);
+}
+
 @media screen and (min-width: 48rem) {
   .header {
     padding: 1.875rem 2.5rem;
