@@ -13,16 +13,16 @@ interface CountryCardProps {
 
 const CountryCardComponent = ({ country, ref }: CountryCardProps) => {
   return (
-    <Link href={`/${country.name.common}`}>
-      <motion.li
-        key={country.cca3}
-        ref={ref}
-        className={classes.card}
-        whileHover={{
-          scale: 1.05,
-          transition: { duration: 0.2, ease: "easeInOut" },
-        }}
-      >
+    <motion.li
+      key={country.cca3}
+      ref={ref}
+      className={classes.card}
+      whileHover={{
+        scale: 1.05,
+        transition: { duration: 0.2, ease: "easeInOut" },
+      }}
+    >
+      <Link href={`/${country.name.common}`}>
         <Image
           src={country.flags.svg}
           alt={country.flags.alt}
@@ -46,8 +46,8 @@ const CountryCardComponent = ({ country, ref }: CountryCardProps) => {
             </p>
           </div>
         </section>
-      </motion.li>
-    </Link>
+      </Link>
+    </motion.li>
   );
 };
 
