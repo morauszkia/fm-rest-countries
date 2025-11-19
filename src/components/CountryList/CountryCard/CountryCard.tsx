@@ -1,16 +1,28 @@
+"use client";
+
 import type { CountryCardData } from "@/util/types";
 import Image from "next/image";
-import classes from "./CountryCard.module.css";
 import Link from "next/link";
+import { motion } from "motion/react";
+import classes from "./CountryCard.module.css";
 
 interface CountryCardProps {
   country: CountryCardData;
+  ref: React.Ref<HTMLLIElement>;
 }
 
-export const CountryCard = ({ country }: CountryCardProps) => {
+const CountryCardComponent = ({ country, ref }: CountryCardProps) => {
   return (
     <Link href={`/${country.name.common}`}>
-      <article className={classes.card}>
+      <motion.li
+        key={country.cca3}
+        ref={ref}
+        className={classes.card}
+        whileHover={{
+          scale: 1.05,
+          transition: { duration: 0.2, ease: "easeInOut" },
+        }}
+      >
         <Image
           src={country.flags.svg}
           alt={country.flags.alt}
@@ -34,7 +46,9 @@ export const CountryCard = ({ country }: CountryCardProps) => {
             </p>
           </div>
         </section>
-      </article>
+      </motion.li>
     </Link>
   );
 };
+
+export const CountryCard = motion.create(CountryCardComponent);
