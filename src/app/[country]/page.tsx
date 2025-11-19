@@ -8,7 +8,7 @@ import { BorderCountries } from "@/components/BorderCountries/BorderCountries";
 export default async function Page({
   params,
 }: {
-  params: { country: string };
+  params: Promise<{ country: string }>;
 }) {
   const { country } = await params;
   const res = await fetch(apiUrlByName(country));
